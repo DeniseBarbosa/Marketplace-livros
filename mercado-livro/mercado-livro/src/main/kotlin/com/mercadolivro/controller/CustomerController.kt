@@ -1,5 +1,6 @@
 package com.mercadolivro.controller
 
+import com.mercadolivro.model.CustomerModel
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -9,12 +10,9 @@ import org.springframework.web.bind.annotation.RestController
 class CustomerController {
 
     @GetMapping
-    fun olaMundo():String{
-        return "customer 1"
+    fun getCustomer(): CustomerModel{
+        return CustomerModel("1","Denise","email@gmail.com")
     }
 
-    @GetMapping( "/1")
-    fun olaMundo1():String{
-        return "Denise"
-    }
+
 }
